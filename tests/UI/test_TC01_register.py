@@ -9,10 +9,9 @@ def test_register(page):
     log_obj=Login(page)
     log_obj.open()
     log_obj.reg_button()
-    reg_obj.enter_email(reg_details["email"])
-    reg_obj.enter_password(reg_details["password"])
-    reg_obj.confirm(reg_details["repeat_pass"])
+    reg_obj.enter_email(reg_details["secondmail"])
+    reg_obj.enter_password(reg_details["password1"])
+    reg_obj.confirm(reg_details["repeat_pass1"])
     reg_obj.click_create()
-    pass
-    
+    time.sleep(3)
 

@@ -11,10 +11,10 @@ class Login(Basepage):
     def __init__(self, page):
         super().__init__(page)
     def enter_username(self,username):
-        self.page.get_by_placeholder(self.user_name).fill(username)
+        self.actions.placeholder(self.user_name).fill(username)
     def password(self,password):
-        self.page.get_by_placeholder(self.password_enter).fill(password)
+        self.actions.placeholder(self.password_enter).fill(password)
     def signin_button(self):
-        self.page.get_by_role("button",name="Sign In").click()
-    #def reg_button(self):
-        #self.page.get_by_text(self.register_link).click()
+        self.actions.role("button",name="Sign In").click()
+    def reg_button(self):
+        self.actions.text_loc(self.register_link).click()

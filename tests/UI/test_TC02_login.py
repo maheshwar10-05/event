@@ -3,7 +3,7 @@ from utils.yamlreader import YamlReader
 import time,pytest
 login_details= YamlReader.read_yaml(filename="login_details.yaml",folder="testdata")
 
-@pytest.fixture
+
 def test_login(page):
     log_obj=Login(page)
     log_obj.open()

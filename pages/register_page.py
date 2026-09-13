@@ -10,14 +10,14 @@ class Register(Basepage):
         super().__init__(page)
         
     def enter_email(self,email):
-        self.page.get_by_placeholder(self.email_loc).fill(email)
+        self.actions.placeholder(self.email_loc).fill(email)
     def enter_password(self,password):
-        self.page.get_by_placeholder(self.password_loc).fill(password)
+        self.actions.placeholder(self.password_loc).fill(password)
     def confirm(self,password):
-        self.page.get_by_placeholder(self.confirm_password).fill(password)
+        self.actions.placeholder(self.confirm_password).fill(password)
         
     def click_create(self):
-        self.page.get_by_role("button",name="Create Account").click()
+        self.actions.role("button",name="Create Account").click()
     def error_message(self):
         error=self.page.locator(self.error_locator).text_content().strip()
         return error
