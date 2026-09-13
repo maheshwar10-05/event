@@ -13,5 +13,6 @@ def test_register(page):
     reg_obj.enter_password(reg_details["password"])
     reg_obj.confirm(reg_details["repeat_pass"])
     reg_obj.click_create()
+    pass
     
 
