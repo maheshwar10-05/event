@@ -1,3 +1,7 @@
 email : "usercreation@gmail.com"
 password : "Creation@12345"
 repeat_pass : "Creation@12345"
+
+secondmail : "testcredential@gmail.com"
+password1 : "Credential@12345"
+repeat_pass1 : "Credential@12345"
